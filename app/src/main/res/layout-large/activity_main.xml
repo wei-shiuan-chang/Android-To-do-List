@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginRight="15dp">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/nameSection">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_weight="8"
+                android:layout_height="50dp"
+                android:hint="@string/add_list_hint"/>
+            <Button
+                android:id="@+id/searchButton"
+                android:onClick="findList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/name"
+                android:layout_weight="1"
+                android:text="Find"/>
+            <Button
+                android:id="@+id/addButton"
+                android:onClick="addList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:text="Add"/>
+        </LinearLayout>
+
+        <FrameLayout
+
+            android:id="@+id/list_frag"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/nameSection"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/item_container"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

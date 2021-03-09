@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TodolistApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_list_hint">Enter the list name here</string>
+    <string name="status_button">Change Status</string>
+    <string name="remove_button">Remove this list</string>
+    <string name="todolist_title">Title</string>
+    <string name="todolist_description">Description</string>
+</resources>

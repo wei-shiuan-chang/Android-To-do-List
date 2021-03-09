@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="com.hfad.todolistapplication.TodolistListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addSection">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="8"
+            android:hint="@string/add_list_hint"/>
+        <Button
+            android:id="@+id/searchButton"
+            android:onClick="findList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name"
+            android:layout_weight="1"
+            android:text="Find"/>
+        <Button
+            android:id="@+id/addButton"
+            android:onClick="addList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/name"
+            android:layout_weight="1"
+            android:text="Add"/>
+    </LinearLayout>
+
+
+
+    <fragment
+        android:name="com.hfad.todolistapplication.TodolistListFragment"
+        android:id="@+id/list_frag"
+        android:layout_below="@id/addSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
